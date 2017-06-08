@@ -171,15 +171,19 @@ public class Ejercicios extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        String entrada1, entrada2, salida1, salida2;
+        String entrada1,entrada3, entrada2, salida3,salida1, salida2;
         entrada1 = "";
         entrada2 = "";
+        entrada3="";
         salida1 = "";
         salida2 = "";
+        salida3="";
         int i = 0;
         int j = 0;
+        int k = 0;
         entrada1 = this.t1.getText();
         entrada2 = this.t2.getText();
+        entrada3 = this.t3.getText();
 
         for (i = entrada1.length() - 1; i >= 0; i--) {
             salida1 = salida1 + entrada1.charAt(i);
@@ -187,7 +191,11 @@ public class Ejercicios extends javax.swing.JFrame {
         for(j= entrada2.length()-1;j>=0;j--){
             salida2 = salida2 + entrada2.charAt(j);
         }
-        this.t3.setText(salida1+ " " + salida2);
+        for(k= entrada3.length()-1;k>=0;k--){
+            salida3 = salida3 + entrada3.charAt(k);
+        }
+        
+        this.t3.setText(salida1+ " " + salida2 +" "+salida3);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
