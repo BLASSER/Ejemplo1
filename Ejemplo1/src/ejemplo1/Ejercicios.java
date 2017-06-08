@@ -39,6 +39,7 @@ public class Ejercicios extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -71,6 +72,13 @@ public class Ejercicios extends javax.swing.JFrame {
             }
         });
 
+        jButton4.setText("Regla de 3");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -98,7 +106,9 @@ public class Ejercicios extends javax.swing.JFrame {
                         .addGap(52, 52, 52)
                         .addComponent(jButton2)
                         .addGap(39, 39, 39)
-                        .addComponent(jButton3)))
+                        .addComponent(jButton3)
+                        .addGap(33, 33, 33)
+                        .addComponent(jButton4)))
                 .addContainerGap(49, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -122,7 +132,8 @@ public class Ejercicios extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2)
-                    .addComponent(jButton3))
+                    .addComponent(jButton3)
+                    .addComponent(jButton4))
                 .addContainerGap(115, Short.MAX_VALUE))
         );
 
@@ -179,6 +190,16 @@ public class Ejercicios extends javax.swing.JFrame {
         this.t3.setText(salida1+ " " + salida2);
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+       float num1,num2,num3,num4;
+        num1 = Integer.parseInt(this.t1.getText());
+        num2 = Integer.parseInt(this.t2.getText());
+        num3 = Integer.parseInt(this.t3.getText());
+        
+        num4 = (num1*num2)/num3;
+         t3.setText(String.valueOf(num4));
+    }//GEN-LAST:event_jButton4ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -218,6 +239,7 @@ public class Ejercicios extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
