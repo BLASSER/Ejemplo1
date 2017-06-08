@@ -38,6 +38,7 @@ public class Ejercicios extends javax.swing.JFrame {
         t3 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -60,6 +61,13 @@ public class Ejercicios extends javax.swing.JFrame {
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
+            }
+        });
+
+        jButton3.setText("Reverso");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
             }
         });
 
@@ -88,7 +96,9 @@ public class Ejercicios extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jButton1)
                         .addGap(52, 52, 52)
-                        .addComponent(jButton2)))
+                        .addComponent(jButton2)
+                        .addGap(39, 39, 39)
+                        .addComponent(jButton3)))
                 .addContainerGap(49, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -111,7 +121,8 @@ public class Ejercicios extends javax.swing.JFrame {
                 .addGap(69, 69, 69)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(jButton2)
+                    .addComponent(jButton3))
                 .addContainerGap(115, Short.MAX_VALUE))
         );
 
@@ -147,6 +158,26 @@ public class Ejercicios extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        String entrada1, entrada2, salida1, salida2;
+        entrada1 = "";
+        entrada2 = "";
+        salida1 = "";
+        salida2 = "";
+        int i = 0;
+        int j = 0;
+        entrada1 = this.t1.getText();
+        entrada2 = this.t2.getText();
+
+        for (i = entrada1.length() - 1; i >= 0; i--) {
+            salida1 = salida1 + entrada1.charAt(i);
+            }
+        for(j= entrada2.length()-1;j>=0;j--){
+            salida2 = salida2 + entrada2.charAt(j);
+        }
+        this.t3.setText(salida1+ " " + salida2);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -186,6 +217,7 @@ public class Ejercicios extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
